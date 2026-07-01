@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radhika Patel — Network, Cloud &amp; Cybersecurity Portfolio</title>
+<style>
+  :root{
+    --bg:#0b1220;
+    --panel:#101a2c;
+    --line:#1f2c44;
+    --text:#dbe4f3;
+    --muted:#7f93b5;
+    --accent:#5eead4;
+    --accent2:#f0b35e;
+    --mono:'JetBrains Mono','SFMono-Regular',Consolas,monospace;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle at 15% 0%, rgba(94,234,212,.06), transparent 40%),
+      radial-gradient(circle at 85% 20%, rgba(240,179,94,.05), transparent 40%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.55;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 28px;}
+  header.hero{border-bottom:1px solid var(--line);padding:90px 0 60px;position:relative;overflow:hidden;}
+  .net-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(94,234,212,.04) 1px, transparent 1px),linear-gradient(90deg, rgba(94,234,212,.04) 1px, transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom, black, transparent 85%);}
+  .hero-inner{position:relative;}
+  .eyebrow{font-family:var(--mono);color:var(--accent);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;}
+  .eyebrow::before{content:"$ ";color:var(--muted);}
+  h1{font-size:clamp(34px,5vw,52px);font-weight:700;letter-spacing:-0.02em;max-width:14ch;}
+  .tagline{margin-top:18px;color:var(--muted);font-size:18px;max-width:58ch;}
+  .stack-line{margin-top:34px;font-family:var(--mono);font-size:13px;color:var(--muted);border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);padding:14px 0;overflow-x:auto;white-space:nowrap;}
+  .stack-line span{color:var(--accent2);}
+  section{padding:56px 0;border-bottom:1px solid var(--line);}
+  .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:36px;}
+  .section-head .tag{font-family:var(--mono);color:var(--muted);font-size:13px;}
+  .section-head h2{font-size:24px;font-weight:600;}
+  .project{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:28px 30px;margin-bottom:22px;position:relative;}
+  .project::before{content:attr(data-id);position:absolute;top:22px;right:26px;font-family:var(--mono);color:var(--line);font-size:13px;}
+  .project h3{font-size:19px;font-weight:600;margin-bottom:6px;padding-right:60px;}
+  .project .role{font-family:var(--mono);color:var(--accent);font-size:12.5px;margin-bottom:14px;display:block;}
+  .project p.desc{color:var(--muted);margin-bottom:16px;font-size:15px;}
+  .project ul{list-style:none;}
+  .project ul li{position:relative;padding-left:18px;margin-bottom:8px;font-size:14.5px;color:var(--text);}
+  .project ul li::before{content:"▸";position:absolute;left:0;color:var(--accent2);}
+  .chips{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{font-family:var(--mono);font-size:11.5px;color:var(--accent);border:1px solid rgba(94,234,212,.3);background:rgba(94,234,212,.06);padding:4px 9px;border-radius:5px;}
+  .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;}
+  .skill-cat h4{font-family:var(--mono);font-size:13px;color:var(--accent2);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;}
+  .skill-cat p{color:var(--muted);font-size:14px;line-height:1.7;}
+  footer{padding:50px 0;text-align:center;color:var(--muted);font-size:14px;}
+  footer .contacts{margin-top:10px;font-family:var(--mono);font-size:13px;}
+  footer .contacts a{margin:0 8px;}
+  @media (max-width:600px){header.hero{padding:60px 0 40px;}.project{padding:22px;}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="net-grid"></div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow">whoami</div>
+    <h1>Network, Cloud &amp; Cybersecurity Engineer</h1>
+    <p class="tagline">I design, secure, and deploy enterprise networks, cloud infrastructure, and server environments — and I test, break into, and defend systems through hands-on penetration testing and incident response.</p>
+    <div class="stack-line">
+      <span>route:</span> OSPF · RIPv2 · VLAN/Subnetting &nbsp;|&nbsp;
+      <span>secure:</span> IPSec VPN · ACL · Zone-Firewall · DMZ &nbsp;|&nbsp;
+      <span>cloud:</span> AWS · CloudFormation · EC2 · VPC · RDS &nbsp;|&nbsp;
+      <span>ops:</span> Windows Server 2019 · Active Directory · Hyper-V · ESXi &nbsp;|&nbsp;
+      <span>cyber:</span> Burp Suite · Nmap · Metasploit · Splunk · NIST 800-61
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">01</span>
+      <h2>Networking &amp; Cloud Projects</h2>
+    </div>
+
+    <div class="project" data-id="01">
+      <h3>Cloud Infrastructure as Code Deployment — Cupcakes (AWS)</h3>
+      <span class="role">TAFE Diploma of IT — Simulated DevOps Engineer Role</span>
+      <p class="desc">Deployed a PHP/MySQL e-commerce web application to AWS using Infrastructure as Code, simulating a real DevOps engineering scenario.</p>
+      <ul>
+        <li>Evaluated CloudFormation, Kubernetes/Helm, and Ansible as IaC options — selected and justified <strong>AWS CloudFormation</strong></li>
+        <li>Built CloudFormation templates (YAML/JSON) provisioning <strong>VPC</strong>, public subnet, Internet Gateway, route tables, <strong>Security Groups</strong>, <strong>EC2</strong> web server, and <strong>S3</strong> bucket</li>
+        <li>Managed all resources through the <strong>AWS CLI</strong> — updated security rules and recreated stack components without manual console clicks</li>
+        <li>Authored a custom multi-tier CloudFormation template with <strong>Amazon RDS (MySQL)</strong> and secure credential handling as secrets</li>
+        <li>Diagnosed and resolved a live deployment fault (HTTP 500 from missing SSL configuration) through structured troubleshooting</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">AWS</span><span class="chip">CloudFormation</span><span class="chip">EC2</span><span class="chip">VPC</span><span class="chip">S3</span><span class="chip">RDS</span><span class="chip">AWS CLI</span><span class="chip">YAML/JSON</span><span class="chip">IaC</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="02">
+      <h3>Enterprise Network Redesign &amp; Security Proposal — HelpYou Mortgage Co.</h3>
+      <span class="role">TAFE Diploma of IT — Simulated Network Engineer Role</span>
+      <p class="desc">Full network modernisation plan for a 70-staff mortgage company expanding across two floors and two sites — from gap analysis to hardware procurement and a formal security proposal.</p>
+      <ul>
+        <li>Conducted a <strong>gap analysis</strong> of current vs. target IT environment (qualitative &amp; quantitative)</li>
+        <li>Designed a complete <strong>VLAN segmentation scheme</strong> (IT, HR, CS, Admin, Marketing, Servers, DMZ) with full IP addressing plan</li>
+        <li>Wrote <strong>Cisco switch configurations</strong>: trunking, <strong>EtherChannel</strong> redundancy, PortFast/BPDU Guard, per-department access ports</li>
+        <li>Designed a <strong>site-to-site GRE VPN tunnel</strong> between two office locations and planned redundant <strong>AD/DNS/DHCP/ESXi</strong> infrastructure</li>
+        <li>Selected and costed enterprise hardware: <strong>Cisco Catalyst</strong>, <strong>FortiGate NGFW</strong>, Dell PowerEdge servers, Bitdefender AV, PRTG — full budget ($47K initial / $21K/yr)</li>
+        <li>Produced a formal <strong>Network Security Proposal</strong> aligned to NIST/ISO and ACSC Essential Eight — covering MFA, password policy, log management, and DMZ architecture</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">VLAN Design</span><span class="chip">Cisco Catalyst</span><span class="chip">EtherChannel</span><span class="chip">GRE VPN</span><span class="chip">FortiGate NGFW</span><span class="chip">Active Directory</span><span class="chip">ESXi</span><span class="chip">NIST</span><span class="chip">Essential Eight</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="03">
+      <h3>WAN Deployment &amp; Dynamic Routing</h3>
+      <span class="role">TAFE Diploma of IT — Cisco Packet Tracer (ICTNWK541/542/543)</span>
+      <p class="desc">End-to-end WAN deployment covering vendor selection through advanced routing and security configuration for a multi-subnet business LAN.</p>
+      <ul>
+        <li>Designed a 3-department network (Sales/HR/Marketing) using <strong>VLSM subnetting</strong>, wrote full Cisco router/switch configs including VLAN trunking and VTY security</li>
+        <li>Configured <strong>PPPoE with CHAP</strong> authentication and <strong>HDLC/PPP</strong> WAN links; performed router firmware upgrades</li>
+        <li>Implemented <strong>Static routing</strong>, <strong>RIPv2</strong>, and <strong>OSPF</strong> dynamic routing across multi-router topologies</li>
+        <li>Wrote and tested <strong>per-VLAN extended ACLs</strong> enforcing a real security policy — verified with <code>show access-lists</code> and live pings</li>
+        <li>Configured <strong>NAT overload</strong> and <strong>static NAT</strong> to expose an internal web server via a single public IP</li>
+        <li>Built a <strong>GRE VPN tunnel</strong> with OSPF running over it for remote teleworker access; diagnosed and fixed a real inter-site connectivity failure</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Cisco IOS</span><span class="chip">VLSM</span><span class="chip">PPPoE/CHAP</span><span class="chip">HDLC</span><span class="chip">ACLs</span><span class="chip">NAT</span><span class="chip">GRE Tunnel</span><span class="chip">RIPv2</span><span class="chip">OSPF</span><span class="chip">Packet Tracer</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="04">
+      <h3>Multi-Site Network Security, Services &amp; Infrastructure</h3>
+      <span class="role">TAFE Diploma of IT — Simulated Network Engineer Role (ICTNWK529)</span>
+      <p class="desc">Configured a full multi-site stack covering secure connectivity, identity, collaboration services, and monitoring — with real troubleshooting documented throughout.</p>
+      <ul>
+        <li>Built <strong>Site-to-Site IPSec VPN over GRE</strong>; diagnosed stalled <strong>IKE Phase 1</strong> negotiation (misconfigured ISAKMP peer IP) and fixed it</li>
+        <li>Configured Cisco <strong>Zone-Based Firewall</strong> (class-maps, policy-maps, zone-pairs); troubleshot a silent traffic drop from a missing ICMP match</li>
+        <li>Deployed and hardened a <strong>Squid proxy</strong> on Linux (UFW rules, ACL access control); resolved a config syntax fault blocking startup</li>
+        <li>Stood up <strong>multi-site Active Directory</strong> (two DCs, AD Sites and Services, scheduled replication); fixed replication failure via Netlogon restart</li>
+        <li>Implemented <strong>DFS</strong>, <strong>FSRM</strong> (quotas/file screening), and <strong>GPOs</strong>; deployed <strong>WSUS</strong> and joined a <strong>Linux client to Windows domain</strong> (realmd/SSSD)</li>
+        <li>Configured <strong>Cisco VoIP</strong> (voice/data VLAN separation, telephony-service, ephone-dn extensions) and <strong>email server</strong> (hMailServer with DNS MX/A records)</li>
+        <li>Deployed <strong>Security Onion (Suricata IDS)</strong> with switch <strong>SPAN port</strong> mirroring; implemented <strong>SNMP/Syslog monitoring</strong> with PRTG</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">IPSec VPN</span><span class="chip">IKE/ISAKMP</span><span class="chip">Zone-Based Firewall</span><span class="chip">Squid Proxy</span><span class="chip">Multi-Site AD</span><span class="chip">GPO</span><span class="chip">WSUS</span><span class="chip">VoIP</span><span class="chip">Suricata IDS</span><span class="chip">PRTG</span><span class="chip">SPAN Port</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="05">
+      <h3>Integrated Server Solution — Build, Test &amp; Troubleshoot (Anzac Airport)</h3>
+      <span class="role">TAFE Diploma of IT — Simulated On-Site IT Technician Role (ICTNWK539/540)</span>
+      <p class="desc">Built, configured, and formally tested two integrated virtual server solutions for a simulated on-site deployment, following WHS and change management procedures.</p>
+      <ul>
+        <li>Conducted a formal <strong>risk assessment</strong> and followed <strong>WHS</strong> procedures before beginning</li>
+        <li>Deployed two <strong>VMware/Hyper-V</strong> virtual environments combining <strong>Windows Server 2019</strong> with a non-Windows OS in the same domain</li>
+        <li>Configured <strong>Active Directory</strong> (OUs, users, groups, domain-join), <strong>DHCP</strong>, <strong>DNS</strong>, <strong>WSUS</strong>, <strong>NTP</strong>, proxy server, and cross-platform <strong>Samba</strong> file sharing</li>
+        <li>Set up web, mail, and FTP services; ran a structured <strong>test plan</strong> covering connectivity, Performance Monitor (CPU/RAM/disk), and <strong>Veeam</strong> backup/restore</li>
+        <li>Documented all issues, root causes, and fixes in a formal troubleshooting report; obtained client sign-off</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Windows Server 2019</span><span class="chip">Active Directory</span><span class="chip">VMware</span><span class="chip">Hyper-V</span><span class="chip">DHCP/DNS</span><span class="chip">WSUS</span><span class="chip">Samba</span><span class="chip">Veeam</span><span class="chip">WHS Risk Assessment</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="06">
+      <h3>Enterprise Communication Solution — Daydream Travel</h3>
+      <span class="role">TAFE Diploma of IT — Simulated IT Consultant Role (ICTNWK536)</span>
+      <p class="desc">Planned, configured, and tested a full enterprise communication platform for a travel agency expanding from one office to four city locations.</p>
+      <ul>
+        <li>Evaluated platforms against business requirements and selected <strong>Slack</strong> with <strong>Zoom VoIP</strong>, Haekka, Polly, and <strong>Office 365</strong> integration</li>
+        <li>Created a <strong>Gantt chart (Excel)</strong> to manage a 3-phase rollout: planning → installation/migration → testing/training</li>
+        <li>Authored a formal <strong>implementation plan</strong>: 6-month schedule, $200,000 budget, 90% adoption target, 99.9% uptime SLA</li>
+        <li>Set up 8 user accounts with <strong>role-based permissions</strong> and enforced <strong>Two-Factor Authentication (2FA)</strong></li>
+        <li>Deployed in a test environment first; ran functional and security tests before production rollout; obtained stakeholder sign-off</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Slack</span><span class="chip">Zoom VoIP</span><span class="chip">Office 365</span><span class="chip">2FA</span><span class="chip">RBAC</span><span class="chip">Gantt Chart</span><span class="chip">Implementation Planning</span><span class="chip">Change Management</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="cybersecurity">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">02</span>
+      <h2>Cybersecurity Projects</h2>
+    </div>
+
+    <div class="project" data-id="07">
+      <h3>Incident Response Team Exercise (IRTx) — "Minotaur"</h3>
+      <span class="role">TAFE Diploma of IT — Red Team Operator &amp; Project Coordinator (7-person team)</span>
+      <p class="desc">Full-scale simulated cyber attack against a live Hack The Box target server deployed in Oracle VirtualBox. My dual role was Red Team operator and project coordinator.</p>
+      <ul>
+        <li><strong>netdiscover</strong> — subnet scan to identify the target's live IP (reconnaissance)</li>
+        <li><strong>Nmap</strong> (-sV) — service enumeration to map open ports and attack surface</li>
+        <li><strong>DirBuster + WPScan</strong> — web directory brute-force and WordPress credential gathering using a custom mutated wordlist</li>
+        <li><strong>Metasploit</strong> (wp_slideshowgallery_upload) — exploited <strong>CVE-2014-5460</strong> (arbitrary file upload), uploaded PHP web shell, gained <strong>Remote Code Execution</strong></li>
+        <li><strong>John the Ripper</strong> — cracked password hashes from shadow.bak; escalated privileges: user → heffer → minotaur → root</li>
+        <li>Mid-exercise: original privesc path blocked — team designed and executed an <strong>alternate privilege escalation route on the fly</strong></li>
+        <li>Blue Team detected 80% of attacks via <strong>Suricata SIEM</strong>; blocked Red Team with a <strong>pfSense Firewall</strong> rule</li>
+        <li>Managed team scheduling, documentation, co-authored IRTx and Project Closure Reports, delivered 15-minute stakeholder presentation</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Red Team</span><span class="chip">Metasploit</span><span class="chip">CVE-2014-5460</span><span class="chip">WPScan</span><span class="chip">John the Ripper</span><span class="chip">RCE</span><span class="chip">Privilege Escalation</span><span class="chip">Suricata SIEM</span><span class="chip">pfSense</span><span class="chip">MITRE ATT&amp;CK</span><span class="chip">NIST 800-61</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="08">
+      <h3>Web Application Security Testing — Midtown IT</h3>
+      <span class="role">TAFE Diploma of IT — Simulated Junior Penetration Tester Role</span>
+      <p class="desc">Structured web application security assessment against XVWA (deliberately vulnerable web app) on Ubuntu, using Kali Linux in a VMware virtual lab. All findings mapped to OWASP Top 10.</p>
+      <ul>
+        <li><strong>Nmap</strong> — port scan to map open services (HTTP, Samba) before testing</li>
+        <li><strong>Nikto</strong> — detected outdated Apache 2.4.7 (EOL), missing security headers, exposed wp-config.php leaking DB credentials</li>
+        <li><strong>Burp Suite</strong> — intercepted and modified live HTTP requests mid-flight; spidered all hidden endpoints</li>
+        <li><strong>OWASP ZAP</strong> — automated scan detected broken authentication, missing HTTPOnly cookie flag, and insecure session tokens</li>
+        <li>Manual <strong>SQL Injection</strong> — crafted URL payloads to dump full database user records</li>
+        <li>Manual <strong>IDOR</strong> — modified URL parameters to access another user's private data without authorisation</li>
+        <li>All findings mapped to <strong>OWASP Top 10</strong> with severity ratings and remediation recommendations</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Kali Linux</span><span class="chip">Nmap</span><span class="chip">Nikto</span><span class="chip">Burp Suite</span><span class="chip">OWASP ZAP</span><span class="chip">SQL Injection</span><span class="chip">IDOR</span><span class="chip">XSS</span><span class="chip">OWASP Top 10</span><span class="chip">VMware</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="09">
+      <h3>Cloud Security Plan — Rossco's Coffee (AWS)</h3>
+      <span class="role">TAFE Diploma of IT — Simulated Cloud Security Consultant Role</span>
+      <p class="desc">Evaluated an existing AWS environment, identified security gaps, and designed a full cloud security upgrade for a coffee franchise dealing with fake orders and data security risks.</p>
+      <ul>
+        <li>Assessed current state: EC2, VPC, Security Groups, IAM, ELB — found single IAM user (no MFA), no WAF, no DLP, no disaster recovery plan</li>
+        <li>Designed upgrade: <strong>EC2 Auto Scaling</strong>, ELB, <strong>RDS Multi-AZ</strong>, VPC segmentation, AWS Backup</li>
+        <li>Recommended controls: <strong>AWS WAF</strong>, MFA, RBAC (IAM), <strong>AWS Cognito</strong>, <strong>AWS Shield</strong> (DDoS), DLP, DNSSEC, CASB, <strong>AWS KMS</strong> encryption</li>
+        <li>Designed <strong>Cloud Incident Response Plan</strong> following <strong>NIST SP 800-61</strong> phases</li>
+        <li>Produced Testing &amp; Migration Plan using AWS Inspector, Nessus, Kali Linux, Metasploit, Apache JMeter</li>
+        <li>Chose <strong>Virtual-to-Virtual (AWS-to-AWS)</strong> migration with <strong>Blue-Green deployment</strong> via Elastic Beanstalk and CodeDeploy; documented RPO/RTO objectives</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">AWS WAF</span><span class="chip">AWS Shield</span><span class="chip">IAM/MFA</span><span class="chip">KMS</span><span class="chip">GuardDuty</span><span class="chip">CloudTrail</span><span class="chip">RDS Multi-AZ</span><span class="chip">NIST 800-61</span><span class="chip">Blue-Green Deployment</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="10">
+      <h3>Cyber Security Data Analysis — Midtown IT</h3>
+      <span class="role">TAFE Diploma of IT — Simulated Cyber Security Analyst Role (VU23216)</span>
+      <p class="desc">Performed cyber security data analysis using SQL Server and Splunk Enterprise — covering database security, SQL injection, big data log analysis, and SOC monitoring.</p>
+      <ul>
+        <li>Built a relational database in <strong>Microsoft SQL Server (SSMS)</strong>; performed full <strong>CRUD operations</strong> using CREATE, INSERT, SELECT, UPDATE, DELETE</li>
+        <li>Executed a live <strong>SQL Injection attack</strong> on a simulated banking site — demonstrated unauthorised access to account data and transactions</li>
+        <li>Installed <strong>Splunk Enterprise</strong>, ingested 30-day log datasets, analysed <strong>63,884 log events</strong></li>
+        <li>Identified 77.3% failed SSH password attempts from a single IP targeting the ubuntu user — flagged as a likely <strong>brute force attack</strong></li>
+        <li>Configured <strong>Windows host monitoring</strong> in Splunk (Network Adapter, every 20 seconds); exported a Splunk report as PDF</li>
+        <li>Documented how Splunk supports <strong>SOC operations</strong> using data from Firewalls, IDS, Access Control Systems, and SIEMs</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">SQL Server</span><span class="chip">CRUD</span><span class="chip">SQL Injection</span><span class="chip">Splunk Enterprise</span><span class="chip">Log Analysis</span><span class="chip">Brute Force Detection</span><span class="chip">SOC Monitoring</span><span class="chip">SIEM</span><span class="chip">Big Data</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="11">
+      <h3>Vulnerability &amp; Penetration Testing Lab — Midtown IT</h3>
+      <span class="role">TAFE Diploma of IT — Simulated Cyber Security Analyst Role (VU23215)</span>
+      <p class="desc">Conducted vulnerability testing and controlled penetration testing across a multi-VM lab, then performed ethical hacking research on real-world vulnerabilities.</p>
+      <ul>
+        <li>Configured a 3-VM isolated network (Kali Linux, Metasploitable-2, Ubuntu); ran Nmap scans (-sT, -F, -A, -sC, -PU) identifying 23 open ports; retrieved SSH banner via amap</li>
+        <li><strong>Wireshark</strong> — analysed TCP/UDP captures; captured and described TCP 3-way handshake flags; compared plaintext Telnet vs encrypted SSH traffic</li>
+        <li><strong>DoS Attack</strong> — ran dos.py Python script for TCP SYN flood; ran <strong>Ettercap</strong> spoofed SYN flood; captured and analysed attack packets</li>
+        <li><strong>Man-in-the-Middle</strong> — used <strong>arpspoof</strong> to poison ARP tables; confirmed MITM via MAC address mismatch; used <strong>dsniff</strong> to extract captured credentials</li>
+        <li><strong>Metasploit</strong> usermap_script — exploited <strong>Samba Command Execution vulnerability</strong> on Metasploitable-2; obtained root shell</li>
+        <li>Researched zero-day attacks: <strong>Heartbleed (OpenSSL 2014)</strong> and <strong>EternalBlue/WannaCry (2017)</strong> — documented mitigation plans for each</li>
+        <li>Wrote Python scripts: active host scanner, port enumeration tool, banner retrieval script; evaluated Scapy, Impacket, PyCryptodome for ethical hacking</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Kali Linux</span><span class="chip">Metasploitable-2</span><span class="chip">Nmap</span><span class="chip">Wireshark</span><span class="chip">Ettercap</span><span class="chip">arpspoof</span><span class="chip">dsniff</span><span class="chip">Metasploit</span><span class="chip">Samba Exploit</span><span class="chip">ARP Spoofing</span><span class="chip">CVE</span><span class="chip">Ethical Hacking</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="12">
+      <h3>Python Security Automation — Midtown IT</h3>
+      <span class="role">TAFE Diploma of IT — Simulated Junior Software Developer Role</span>
+      <p class="desc">Designed, developed, tested, and documented three Python automation scripts following a full SDLC — from requirements gathering through pseudocode, desk-check testing, coding, debugging, and stakeholder sign-off.</p>
+      <ul>
+        <li><strong>Rock Paper Scissors</strong> — if-elif-else logic, while loop, .lower() input standardisation</li>
+        <li><strong>Multiplication Table Generator</strong> — modular functions, loops, f-strings, integer type conversion, input validation</li>
+        <li><strong>Caesar Cipher</strong> — encryption/decryption using array indexing and modulo arithmetic; handles unsupported characters with error messages</li>
+        <li>Designed pseudocode and verified all logic via <strong>desk-check tables</strong> before coding</li>
+        <li>Compared 4 IDEs across 7 features; selected <strong>Flask + Thonny</strong> with written justification; maintained a communication log across 7 stakeholder meetings</li>
+        <li>Produced user documentation and obtained <strong>project manager sign-off</strong> on all three scripts</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">Algorithm Design</span><span class="chip">Pseudocode</span><span class="chip">Caesar Cipher</span><span class="chip">Flask</span><span class="chip">Thonny</span><span class="chip">Input Validation</span><span class="chip">SDLC</span><span class="chip">Stakeholder Sign-off</span>
+      </div>
+    </div>
+
+    <div class="project" data-id="13">
+      <h3>Cyber Security Research Cluster — Legislation &amp; Compliance</h3>
+      <span class="role">TAFE Diploma of IT — Simulated Cybersecurity Governance Analyst Role</span>
+      <p class="desc">Conducted cyber risk, governance, and compliance assessments across multiple simulated business environments, identifying regulatory obligations and recommending security controls.</p>
+      <ul>
+        <li>Researched and applied major <strong>Australian cyber legislation</strong>: Privacy Act 1988, Telecommunications (Interception and Access) Act 1979, Criminal Code Act 1995, APRA CPS 234</li>
+        <li>Evaluated international regulations: <strong>GDPR</strong>, UK Data Protection Act 2018, <strong>CCPA</strong>, Budapest Convention on Cybercrime</li>
+        <li>Applied <strong>NIST CSF</strong>, <strong>ACSC Essential Eight</strong>, <strong>MITRE ATT&amp;CK</strong>, and <strong>Cyber Kill Chain</strong> to assess threats and control effectiveness</li>
+        <li>Developed organisational <strong>Cyber Safety Protocol</strong> and <strong>Virtual Meeting Protocol</strong> for secure collaboration</li>
+        <li>Recommended controls: MFA, network segmentation, SIEM, IDS/IPS, encryption, audit logging, and PCI-DSS aligned payment security</li>
+        <li>Produced <strong>compliance gap analysis reports</strong> with remediation priorities for each assessed business</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">NIST CSF</span><span class="chip">ACSC Essential Eight</span><span class="chip">MITRE ATT&amp;CK</span><span class="chip">Privacy Act 1988</span><span class="chip">APRA CPS 234</span><span class="chip">GDPR</span><span class="chip">GRC</span><span class="chip">Compliance Gap Analysis</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="lab">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">03</span>
+      <h2>Technical Lab Practice</h2>
+    </div>
+    <div class="project" data-id="LAB">
+      <h3>Windows Server 2019 &amp; Fedora Linux — 28-Lab Infrastructure Exercises</h3>
+      <span class="role">TAFE Diploma of IT — ICTNWK539/540 Lab Manual (Independent Practice)</span>
+      <p class="desc">Hands-on lab exercises covering end-to-end Windows Server 2019 and Fedora Linux administration, virtualisation, and enterprise infrastructure — completed independently across 28 structured labs.</p>
+      <ul>
+        <li><strong>Virtualisation:</strong> VMware Workstation, Hyper-V (dynamic memory, QoS, PowerShell provisioning, virtual switches), VMware ESXi (Type-1 hypervisor, datastores)</li>
+        <li><strong>Active Directory:</strong> ADDS install, new forest, OUs/users/groups via GUI and PowerShell; Active Directory Administrative Center</li>
+        <li><strong>Group Policy &amp; Security:</strong> GPOs, security/audit policies, Software Restriction Policies, AppLocker</li>
+        <li><strong>Storage:</strong> Storage Pools, volumes, NTFS permissions, Work Folders</li>
+        <li><strong>Network Services:</strong> DHCP (IPv4/IPv6), DNS (zones, resource records, reverse lookup), NTP, Windows Firewall, IIS</li>
+        <li><strong>Patch &amp; Monitoring:</strong> WSUS, Event Viewer, Performance Monitor, Resource Monitor</li>
+        <li><strong>Linux:</strong> Users/groups, file permissions, FTP, web server, mail server, Squid proxy, NFS/SMB Samba cross-platform file sharing</li>
+      </ul>
+      <div class="chips">
+        <span class="chip">Windows Server 2019</span><span class="chip">Fedora Linux</span><span class="chip">Active Directory</span><span class="chip">GPO</span><span class="chip">AppLocker</span><span class="chip">Hyper-V</span><span class="chip">VMware ESXi</span><span class="chip">PowerShell</span><span class="chip">NTFS</span><span class="chip">Samba/NFS</span><span class="chip">WSUS</span><span class="chip">IIS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">04</span>
+      <h2>Technical Skills</h2>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-cat">
+        <h4>Networking</h4>
+        <p>VLAN Design, VLSM Subnetting, OSPF, RIPv2, Static/Default Routing, Cisco IOS, DHCP, DNS, NAT, ACLs, PPPoE/CHAP, HDLC, WAN Design, Packet Tracer</p>
+      </div>
+      <div class="skill-cat">
+        <h4>Security</h4>
+        <p>IPSec VPN, Zone-Based Firewall, GRE Tunnel, DMZ Architecture, MFA, Encryption, ARP Spoofing, DoS/DDoS, Man-in-the-Middle, Risk Assessment, Disaster Recovery</p>
+      </div>
+      <div class="skill-cat">
+        <h4>Cloud (AWS)</h4>
+        <p>CloudFormation, EC2, VPC, S3, RDS, IAM, AWS WAF, AWS Shield, KMS, GuardDuty, CloudWatch, CloudTrail, Auto Scaling, Elastic Load Balancer</p>
+      </div>
+      <div class="skill-cat">
+        <h4>Systems &amp; Servers</h4>
+        <p>Windows Server 2019, Active Directory, Group Policy, AppLocker, WSUS, IIS, Linux (Fedora/Kali/Ubuntu), Hyper-V, VMware ESXi, PowerShell, Veeam</p>
+      </div>
+      <div class="skill-cat">
+        <h4>Cybersecurity</h4>
+        <p>Penetration Testing, Kali Linux, Nmap, Metasploit, Wireshark, Burp Suite, OWASP ZAP, Nikto, Splunk, SQL Injection, IDOR, XSS, Suricata IDS, NIST SP 800-61, OWASP Top 10, ACSC Essential Eight</p>
+      </div>
+      <div class="skill-cat">
+        <h4>Other</h4>
+        <p>Python, SQL Server, Cisco VoIP, PRTG, Security Onion, pfSense, SNMP/Syslog, MITRE ATT&amp;CK, GDPR, Privacy Act 1988, APRA CPS 234</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Radhika Patel — Network, Cloud &amp; Cybersecurity Engineer</p>
+    <div class="contacts">
+      <a href="mailto:radhikadave18@gmail.com">email</a>·
+      <a href="https://www.linkedin.com/in/radhikadave18/" target="_blank" rel="noopener">linkedin</a>·
+      <a href="https://radsdave.github.io/Portfolio/" target="_blank" rel="noopener">github</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
